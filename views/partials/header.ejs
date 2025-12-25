@@ -1,0 +1,24 @@
+<header>
+    <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM10 17H8V13H10V17ZM16 17H14V9H16V17ZM13 17H11V11H13V17Z">
+            </path>
+        </svg>
+        Cozil
+    </div>
+    <div class="user-menu" style="display: flex; gap: 1rem; align-items: center;">
+        <% if (locals.user) { %>
+            <a href="/" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">Chat</a>
+            <a href="/history" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">History</a>
+            <span style="color: var(--primary); font-weight: 500;">
+                <%= user.username %>
+            </span>
+            <a href="/logout" style="color: #ef4444; text-decoration: none; font-size: 0.9rem;">Logout</a>
+            <% } else { %>
+                <a href="/login" style="color: var(--primary); text-decoration: none; font-weight: 500;">Login</a>
+                <a href="/register"
+                    style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.9rem;">Register</a>
+                <% } %>
+    </div>
+</header>

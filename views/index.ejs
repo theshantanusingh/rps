@@ -1,0 +1,61 @@
+<div class="chat-container">
+    <div class="chat-messages" id="chat-messages">
+        <div class="message bot">
+            <div class="message-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z">
+                    </path>
+                </svg>
+            </div>
+            <div class="message-inner">
+                <div class="message-role">Cozil</div>
+                <div class="message-content">
+                    Hello! I'm Cozil, your personal Pharmacist assistant. I can help interpret your medical reports or
+                    answer general health questions. <br><br>
+                    <strong>How can I help you today?</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="file-preview" id="file-preview">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+            <polyline points="14 2 14 8 20 8" />
+        </svg>
+        <span id="file-name">filename.pdf</span>
+        <button onclick="clearFile()" style="background:none;border:none;cursor:pointer;color:inherit;">×</button>
+    </div>
+
+    <div class="loading-indicator" id="loading-indicator">
+        Analyzing...
+    </div>
+
+    <form class="chat-input-area" id="chat-form">
+        <input type="file" id="file-input" name="report" accept=".pdf,image/*" hidden>
+
+        <button type="button" class="file-upload-btn" id="upload-trigger" title="Attach Report">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+            </svg>
+        </button>
+
+        <div class="input-wrapper">
+            <textarea id="message-input" name="message"
+                placeholder="Type your health query or ask about the report..."></textarea>
+        </div>
+
+        <button type="submit" class="send-btn" id="send-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+        </button>
+    </form>
+</div>
